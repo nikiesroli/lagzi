@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "waltdisney";
+    src: url('waltdisney.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("balaton_alap2.png");
+    background-color: #002f6f;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+
+h1, p {
+    font-family: "waltdisney", sans-serif;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 50px;
+    font-size: 3em;
+}
+
+p {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.meghivo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    min-height: 100vh;
+}
+
+.meghivo > img {
+    width: 100%;
+}
+
+#plus1k {
+    width: 100%;
+    margin: 100px auto;
+}
+
+#sub1k {
+    display: none;
+    margin: 100px auto;
+}
+
+@media all and (max-width: 1200px) {
+    .meghivo {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        grid-gap: 2em;
+    }
+
+    .meghivo > div {
+        grid-row: 2;
+    }
+
+    .meghivo > img {
+        grid-row: 1;
+    }
+
+}
+
+@media all and (max-width: 1000px) {
+    #plus1k {
+        display: none;
+    }
+
+    #sub1k {
+        display: block;
+        width: 100%;
+    }
+}
